@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost & Found</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Pacifico&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav>
+    <div class="logo">Lost & Found</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#report">Report</a></li>
+      <li><a href="#items">Items</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+      <button id="login-btn">Login</button>
+      <button id="register-btn">Register</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h1>Welcome to Lost & Found 🌸</h1>
+      <p>Helping lost things find their way home. 🏡</p>
+    </section>
+
+    <section id="report">
+      <h2>Report a Lost or Found Item</h2>
+      <form id="report-form">
+        <input type="text" id="item-name" placeholder="Item Name" required>
+        <textarea id="description" placeholder="Describe the item..." required></textarea>
+        <select id="status">
+          <option value="lost">Lost 😢</option>
+          <option value="found">Found 😊</option>
+        </select>
+        <label for="image-upload">Upload Item Image:</label>
+        <input type="file" id="image-upload" accept="image/*" required>
+        <input type="text" id="contact" placeholder="Your Contact Info" required>
+        <button type="submit">Submit 💌</button>
+      </form>
+    </section>
+
+    <section id="items">
+      <h2>Lost & Found Items</h2>
+      <ul id="items-list"></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us 📞</h2>
+      <p>Email: support@lostfound.com</p>
+      <p>Phone: +91 XXXX XXXXX</p>
+    </section>
+  </main>
+
+  <!-- Register Modal -->
+  <div id="register-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-register">&times;</span>
+      <h2>Register</h2>
+      <form id="register-form">
+        <input type="email" id="register-email" placeholder="Email" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-login">&times;</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>💖 Namrata Muralidharan 💖</p>
+  </footer>
+</body>
+</html>
